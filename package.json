@@ -1,0 +1,14 @@
+{
+  "name": "secret-board-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scrips": {
+    "test": "node test.js"
+  },
+  "repository": "git@github.com:HappyKumamoto/secret-board-2021.git",
+  "author": "HappyKumamoto",
+  "license": "MIT",
+  "dependencies": {
+    "pug": "2.0.4"
+  }
+}
