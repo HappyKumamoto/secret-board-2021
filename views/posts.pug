@@ -4,6 +4,7 @@ html(lang="ja")
     meta(charset="UTF-8")
     title THE SECRET BORD 
   body 
+    a(href="/logout") LOGOUT
     h1 THE SECRET BORD
     h2 NEW POSTS 
     form(method="post" action="/posts")
@@ -11,3 +12,8 @@ html(lang="ja")
         textarea(name="content" cols=40 rows=4)
       div 
         button(type="submit") POST
+
+    h2 POSTED LIST 
+    each content in contents 
+      p #{content}
+      hr
