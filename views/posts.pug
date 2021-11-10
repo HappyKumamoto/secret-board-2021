@@ -14,6 +14,9 @@ html(lang="ja")
         button(type="submit") POST
 
     h2 POSTED LIST 
-    each content in contents 
-      p #{content}
+    //- each content in contents 
+       //- p #{content}
+    each post in posts 
+      p #{post.content}
+      p POSTED TIME: #{post.createdAt}
       hr
