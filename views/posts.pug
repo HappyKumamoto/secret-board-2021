@@ -17,6 +17,7 @@ html(lang="ja")
     //- each content in contents 
        //- p #{content}
     each post in posts 
+      h3 #{post.id} : ID:#{post.trackingCookie}
       p #{post.content}
       p POSTED TIME: #{post.createdAt}
       hr
