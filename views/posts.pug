@@ -32,7 +32,7 @@ html(lang="ja")
       div.card-body
         p.card-text!=post.content
       div.card-footer
-        div POSTED TIME: #{post.createdAt}
+        div POSTED TIME: #{post.formattedCreatedAt}
         - let isAdmin = (user === 'admin')
         if isAdmin 
           div WRITER : #{post.postedBy}
@@ -40,7 +40,9 @@ html(lang="ja")
         if isDeletable 
           form(method="post" action="/posts?delete=1")
             input(type="hidden" name="id" value=post.id)
-            button(type="submit" onclick='return confirm("Are you sure?");').btn.btn-danger.float-right DELETE
+            button(type="submit" onclick='return confirm("Are you sure?");').btn.btn-danger.float-top DELETE
+        div * - - - - - - - - - - - - - - - - - - *
+        hr
 
     script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
