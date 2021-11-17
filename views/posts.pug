@@ -22,7 +22,7 @@ html(lang="ja")
         h3 #{post.id} : *ADMINISTRATOR*
       else 
         h3 #{post.id} : ID:#{post.trackingCookie}
-      p #{post.content}
+      p!= post.content
       p POSTED TIME: #{post.createdAt}
       - let isAdmin = (user === 'admin')
       if isAdmin 
