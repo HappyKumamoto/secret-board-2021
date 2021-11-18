@@ -3,7 +3,7 @@ const http = require('http');
 const auth = require('http-auth');
 const router = require('./lib/router');
 
-const basic = auth.basic({
+const basic = auth.basic({//basic authentication
   realm: 'Enter username and password.',
   file: './users.htpasswd'
 });
