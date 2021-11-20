@@ -29,7 +29,7 @@ html(lang="ja")
       else
         h3 #{post.id} : ID:#{post.trackingCookie}
       span
-        p!= post.content
+        p(style="white-space:pre; overflow:auto;") #{post.content}
       h4 #{post.formattedCreatedAt}
       - let isAdmin = (user === 'admin')
       if isAdmin
