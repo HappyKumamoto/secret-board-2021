@@ -9,7 +9,7 @@ const html = pug.renderFile('./views/posts.pug', {
       id: 1,
       content: "<script>alert('test');</script>",
       postedBy: 'guest1',
-      trackingCookie: 1,
+      trackingCookie: '7658404902596857_644b19f7797f0d422213a47759a09a3b2865adf3',
       createdAt: new Date(),
       updatedAt: new Date()
     }
@@ -20,4 +20,7 @@ const html = pug.renderFile('./views/posts.pug', {
 
 // スクリプトタグがエスケープされて含まれていることをチェック
 assert(html.includes("&lt;script&gt;alert('test');&lt;/script&gt;"));
+//トラッキングidの前半のみが表示されているかどうかをチェック
+assert(!html.includes('644b19f7797f0d422213a47759a09a3b2865adf3'));
+
 console.log('テストが正常に完了しました！')

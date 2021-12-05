@@ -27,12 +27,12 @@ html(lang="ja")
       if isPostedByAdmin
         h3 #{post.id} : ★ADMIN★
       else
-        - var originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
-        - var originalTrackingIdStr = String(originalTrackingId)
-        - var nihongoId = ''
-        - for (var i=0; i<originalTrackingIdStr.length; i+=2){
-        - nihongoId += String.fromCodePoint( 0x3030+ parseInt((originalTrackingIdStr.substr(i,2)),16));}
-        h3 #{post.id} : ID:' #{nihongoId} '
+        - let originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
+        - let originalTrackingIdStr = String(originalTrackingId)
+        - let textedId = ''
+        - for (let i=0; i<originalTrackingIdStr.length; i+=2){
+        - textedId += String.fromCodePoint( parseInt((originalTrackingIdStr.substr(i,2)),16));}
+        h3 #{post.id} : ID:' #{textedId} '
 
         //- h3 #{post.id} : ID:#{post.trackingCookie}
       span
